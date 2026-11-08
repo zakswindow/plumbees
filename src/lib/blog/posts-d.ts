@@ -1,0 +1,95 @@
+import { h2, p, ul, ol, type Post } from "./types";
+
+const date = "2026-11-07";
+
+export const postsD: Post[] = [
+  {
+    slug: "washroom-plumbing-for-shops-and-offices",
+    title: "Keeping washrooms working in shops and offices",
+    metaDescription: "Faulty washrooms cost businesses time and trade. Learn what employers should provide, common faults and how to keep plumbing reliable.",
+    excerpt: "A broken toilet in a workplace is more than an inconvenience. Here is how to keep washrooms in good order.",
+    category: "Business",
+    date,
+    related: ["commercial-plumbing", "blocked-drains-and-toilets"],
+    blocks: [
+      p("When a washroom goes out of order, the effect is immediate. Staff are unhappy, customers notice and, in some cases, the business may not be able to open. This is general guidance, so check your own obligations, which depend on the size and type of workplace."),
+      h2("What employers need to provide"),
+      p("In Great Britain, the Workplace (Health, Safety and Welfare) Regulations 1992 require employers to provide suitable and sufficient toilets and washing facilities, kept clean and in good working order, with a supply of clean water. The details depend on the number of people using them."),
+      h2("Common washroom faults"),
+      ul("Leaking or running cisterns", "Blocked toilets and urinals", "Taps that drip, stiffen or fail", "Slow-draining basins", "Leaks around fittings that damage floors", "Unpleasant smells from dry traps or poor drainage"),
+      h2("Simple habits that help"),
+      ul("Encourage staff to report faults at once", "Keep a stock of the right consumables, and never flush anything but toilet paper", "Have a quick daily check of toilets, taps and floors", "Know where the isolation valves are, so that a fault can be contained"),
+      h2("Plan for reactive and routine work"),
+      p("Having a plumber you can call quickly is worth more than the cheapest quote on the day. A local contact who already knows your site can usually attend faster and fix things properly."),
+      h2("Working around trading hours"),
+      p("We can often work before opening or after closing to keep disruption down. Tell us what hours suit you when you contact us. See our [commercial plumbing](/services/commercial-plumbing) page, or [request a quote](/book).")
+    ],
+  },
+  {
+    slug: "kitchen-plumbing-for-cafes-and-restaurants",
+    title: "Kitchen plumbing for cafes and restaurants: avoiding costly blockages",
+    metaDescription: "Fat, food waste and heavy use cause most kitchen drain problems. Learn how cafes and restaurants can prevent blockages and downtime.",
+    excerpt: "Busy kitchens are tough on drains. A few habits can prevent the blockages that shut services down.",
+    category: "Business",
+    date,
+    related: ["commercial-plumbing", "blocked-drains-and-toilets", "emergency-plumber"],
+    blocks: [
+      p("A commercial kitchen puts heavy demands on its plumbing. Hot water, fats, oils and food waste go down the drains many times a day. When a drain blocks mid-service, the cost is lost trade and unhappy customers."),
+      h2("The usual causes of blockages"),
+      ul("Fat, oil and grease that cools and hardens in pipes", "Food scraps that pass through sink strainers or are scraped into the sink", "Coffee grounds from machines and bar areas", "Items accidentally dropped into floor drains", "Damaged or poorly laid pipework that collects debris"),
+      h2("Prevention in practice"),
+      ul("Scrape plates and pans into the bin before washing", "Fit and clean strainers on every sink and floor drain", "Collect used cooking oil for proper disposal, and never pour it away", "Use a grease trap if your premises are required to, and keep it emptied and serviced", "Train new staff on what must not go down the sinks"),
+      h2("Watch for warning signs"),
+      ul("Water that drains slowly from sinks or floor gullies", "Bad smells from drains", "Gurgling noises", "Water backing up when another fitting is used"),
+      p("If these appear, act before the drain fails completely."),
+      h2("Check your obligations"),
+      p("Rules about grease management and discharge to the public sewer apply to food businesses. Check with your water company and local authority about what applies to your site."),
+      h2("When it goes wrong"),
+      p("If a drain blocks during service, tell us it is urgent. We clear the problem, identify the cause and advise how to stop it returning. See our [commercial plumbing](/services/commercial-plumbing) and [emergency plumber](/services/emergency-plumber) pages, or [get in touch](/book).")
+    ],
+  },
+  {
+    slug: "winter-plumbing-checklist",
+    title: "A winter plumbing checklist for London homes and landlords",
+    metaDescription: "Get your plumbing ready for winter with this simple checklist covering pipes, outside taps, stopcocks, drains and spare keys.",
+    excerpt: "Autumn is the best time to deal with the small problems that cold weather turns into big ones.",
+    category: "Home advice",
+    date,
+    related: ["leaks-and-burst-pipes", "emergency-plumber", "landlord-plumbing"],
+    blocks: [
+      p("Cold weather finds weak points. A pipe that has been slowly corroding, a joint that was never quite right or an uninsulated tank in the loft is far more likely to fail in winter. A short checklist in autumn makes a real difference."),
+      h2("Inside the property"),
+      ul("Find your stopcock and make sure it turns. Tell everyone in the household where it is.", "Insulate pipes and tanks in the loft, cellar, garage and any unheated spaces", "Fix dripping taps and weeping joints now, before they freeze or worsen", "Check under sinks and around toilets for signs of damp", "Make sure isolation valves on basins, toilets and appliances work"),
+      h2("Outside"),
+      ul("Turn off and drain outside taps, and fit insulating covers", "Disconnect hoses", "Clear gutters and gullies, as blocked drains can cause overflow and ice", "Check external pipes, including overflow pipes, for damage"),
+      h2("If you will be away"),
+      p("Ask someone to check the property regularly, or turn the water off at the stopcock and drain the system. Read our guide on [preparing your plumbing before you go away](/blog/preparing-your-plumbing-before-you-go-away)."),
+      h2("For landlords"),
+      ul("Tell tenants how to find the stopcock and who to contact in an emergency", "Ask tenants to report leaks or frozen pipes immediately", "Inspect empty properties during cold spells"),
+      h2("Know who to call"),
+      p("Save a plumber's number in your phone before you need it. Our [emergency plumber](/services/emergency-plumber) page explains how we handle urgent requests. Read more about [how to stop pipes freezing](/blog/how-to-stop-pipes-freezing), or [get a quote](/book) for any repairs you want done before the cold sets in.")
+    ],
+  },
+  {
+    slug: "how-much-does-plumbing-cost-what-affects-price",
+    title: "What affects the cost of plumbing work, and why quotes differ",
+    metaDescription: "Why do plumbing quotes vary so much? Learn what affects the price of a job, and how to compare quotes fairly before you decide.",
+    excerpt: "Two plumbers can quote very different amounts for what looks like the same job. Here is why.",
+    category: "Home advice",
+    date,
+    related: ["emergency-plumber", "bathroom-plumbing", "leaks-and-burst-pipes"],
+    blocks: [
+      p("People often ask what a particular plumbing job should cost. The honest answer is that it depends. Two jobs that sound the same can need very different amounts of work, which is why, apart from the common jobs in our price guide, we quote each one individually."),
+      h2("What affects the price"),
+      ul("The work itself: how much needs to be done, and how complex it is", "Access: a pipe under an open sink is quicker to repair than one behind tiles or under a fitted floor", "Parts and materials, which vary in price and availability", "The age and condition of the existing pipework", "Timing: urgent and out-of-hours work usually costs more", "Location, including parking, congestion or building access rules"),
+      h2("Why quotes differ"),
+      p("Sometimes the difference comes from what is included. One quote may allow for making good after repairs, while another may not. One may include parts, while another lists them separately. One plumber may have looked at the problem properly, while another has guessed."),
+      h2("How to compare quotes"),
+      ol("Check that each quote describes the same work.", "Look at what is included and excluded.", "Ask about guarantees and insurance.", "Check the payment terms.", "Ask what happens if the job turns out to be bigger than expected."),
+      h2("The cheapest is not always the best"),
+      p("A very low quote can mean the plumber has missed something, will add costs later or is cutting corners. Equally, a high quote is not proof of better work. Look at how clearly the plumber has explained the job."),
+      h2("Our approach"),
+      p("For common jobs such as fitting a tap or clearing a blocked sink, we publish typical prices in our [price guide](/pricing). Most of the time, that is the price you pay. For everything else, we ask for details and give you a written quote before we start. If we find something unexpected, we stop and speak to you first. You can also [request a quote](/book).")
+    ],
+  },
+];
