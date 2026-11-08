@@ -1,0 +1,120 @@
+import { h2, p, ul, ol, type Post } from "./types";
+
+const date = "2026-11-07";
+
+export const postsA: Post[] = [
+  {
+    slug: "what-to-do-when-a-pipe-bursts",
+    title: "What to do when a pipe bursts: a calm, step-by-step guide",
+    metaDescription: "A burst pipe needs quick, calm action. Here is exactly what to do in the first ten minutes, what to photograph and when to call a plumber.",
+    excerpt: "The first ten minutes matter most. Here is what to do, in order, when water is coming where it should not.",
+    category: "Emergencies",
+    date,
+    related: ["emergency-plumber", "leaks-and-burst-pipes"],
+    blocks: [
+      p("A burst pipe feels like an emergency because it is one. Water spreads quickly, and every minute it runs adds to the damage. The good news is that the first few steps are simple, and anyone can do them."),
+      h2("Step by step"),
+      ol(
+        "Turn off the water at the main stopcock. It is usually under the kitchen sink, in a utility room or near the front door. Turn it clockwise until it stops.",
+        "Open the cold taps, starting with the highest in the house, to drain the remaining water out of the pipes.",
+        "Switch off the electricity at the consumer unit if water is near sockets, light fittings or appliances. Do not touch electrics if you are standing in water.",
+        "Move valuables, rugs and furniture away from the wet area, and use towels and buckets to limit the spread.",
+        "Take photographs and short videos of the damage before you clear anything up. Your insurer will want them.",
+        "Call a plumber and tell them it is an emergency, with your postcode and a short description of what has happened."
+      ),
+      h2("If you cannot find or turn off the stopcock"),
+      p("Older stopcocks can seize up, particularly if they have not been turned for years. Do not force it with a tool, as you may snap the spindle. Instead, tell us as soon as you contact us and we will talk you through the alternatives. In a flat, there may be a communal stopcock, and your managing agent or neighbours may be able to help."),
+      h2("What to tell your plumber"),
+      ul("Where the water is coming from and how fast it is flowing", "Whether you have managed to turn off the supply", "Whether it is coming through a ceiling or near electrics", "Whether you own the property, rent it, or manage it for someone else"),
+      h2("After the water is off"),
+      p("A temporary fix is not always a permanent one. A burst pipe often fails because of age, corrosion, frost or a poor joint, so it is worth asking the plumber to check the pipework nearby. Dry the area properly and ask your insurer whether they want to see the damage before repairs. Our [emergency plumber](/services/emergency-plumber) page explains how we handle urgent requests."),
+      p("If you are worried right now, you can [request an emergency quote](/book) and mark it as urgent.")
+    ],
+  },
+  {
+    slug: "how-to-find-and-use-your-stopcock",
+    title: "How to find and use your stopcock before you need it",
+    metaDescription: "Knowing where your stopcock is can save thousands in water damage. Here is how to find it, test it and what to do if it is stuck.",
+    excerpt: "Five minutes spent finding your stopcock today could save you a great deal of trouble later.",
+    category: "Home advice",
+    date,
+    related: ["emergency-plumber", "leaks-and-burst-pipes"],
+    blocks: [
+      p("Most people only look for the stopcock when water is already pouring through the ceiling. That is the worst possible time to learn where it is. A quick check now takes a few minutes and could prevent a lot of damage."),
+      h2("What a stopcock does"),
+      p("The stopcock, or main stop valve, controls the water supply to your whole property. Turning it off stops water entering the pipes, which is the first step in almost any plumbing emergency."),
+      h2("Where to look"),
+      ul("Under the kitchen sink, the most common spot", "In a utility room or downstairs toilet", "Under the stairs or in a hallway cupboard", "Near the front door, sometimes in a boxed-in section", "In a flat, a shared riser cupboard or communal meter cupboard"),
+      p("Follow the pipe that comes in from outside, usually a blue plastic or a copper pipe. The first valve on it is likely to be your stopcock."),
+      h2("How to test it"),
+      ol("Turn the valve clockwise until it stops. Do not use more force than you would to open a stiff jar.", "Open a cold tap nearby. The flow should slow and then stop.", "Turn the stopcock back on and check the tap runs normally."),
+      h2("If it is stuck or leaking"),
+      p("Stopcocks that are rarely used can seize or start to drip. A plumber can free it, replace it or fit a new isolation valve. It is a small job that is worth doing before an emergency, not during one."),
+      h2("Know your other valves"),
+      p("Basins, toilets, washing machines and dishwashers often have their own small isolation valves. Knowing where they are means you can shut off one fitting without losing water to the whole house. If any are missing, we can add them when we visit. See our [taps, toilets and showers](/services/taps-toilets-and-showers) service for more."),
+      p("Write down where your stopcock is and tell everyone who lives with you, including tenants if you are a landlord.")
+    ],
+  },
+  {
+    slug: "how-to-stop-pipes-freezing",
+    title: "How to stop pipes freezing, and what to do if they have",
+    metaDescription: "Frozen pipes can burst when they thaw. Learn how to prevent freezing, thaw a pipe safely and know when to call a plumber.",
+    excerpt: "Cold weather is a classic cause of burst pipes. A few simple steps can protect your home.",
+    category: "Emergencies",
+    date,
+    related: ["leaks-and-burst-pipes", "emergency-plumber"],
+    blocks: [
+      p("London winters are often mild, but a sharp cold snap can still catch homes out, particularly pipes in lofts, outbuildings, garages and unheated rooms. Water expands as it freezes, and that pressure can split a pipe. The damage often shows up when the ice thaws."),
+      h2("Prevention"),
+      ul("Insulate pipes and tanks in lofts, garages and cellars with proper lagging", "Fix dripping taps, which can freeze more easily", "Keep the property at a low background temperature if you are away", "Know where your stopcock is so that you can turn the water off quickly", "Disconnect garden hoses and insulate or cover outside taps"),
+      h2("Signs that a pipe has frozen"),
+      ul("No water, or only a trickle, from a tap", "A toilet cistern that will not refill", "Frost on an exposed pipe", "Unusual gurgling noises"),
+      h2("What to do if you think a pipe is frozen"),
+      ol("Turn off the water at the stopcock.", "Open the affected tap so that water can escape as the ice melts.", "Thaw the pipe gently, starting from the tap end, using a hot water bottle, warm towels or a hairdryer on a low setting.", "Never use a naked flame or a blowtorch. It is a fire risk and can damage the pipe.", "Once the water flows, turn the supply back on slowly and check for leaks."),
+      h2("When to call a plumber"),
+      p("If you cannot find the frozen section, if the pipe is bulging or split, or if water has started to leak, call a plumber. Splits are often hidden behind walls or under floors and appear only as the ice melts. Our guide to [leaks and burst pipes](/services/leaks-and-burst-pipes) explains how we trace and repair them."),
+      p("If you are going away over winter, ask a friend to check the property, or consider draining down the system. We can advise on what is sensible for your home.")
+    ],
+  },
+  {
+    slug: "why-does-my-toilet-keep-running",
+    title: "Why does my toilet keep running, and how is it fixed?",
+    metaDescription: "A toilet that runs on wastes water and money. Here are the usual causes, simple checks you can do and when to call a plumber.",
+    excerpt: "A running toilet is annoying and wasteful. The cause is usually a small part that is cheap to replace.",
+    category: "Home advice",
+    date,
+    related: ["taps-toilets-and-showers", "bathroom-plumbing"],
+    blocks: [
+      p("If your cistern keeps refilling, you can hear trickling after a flush or you notice a thin stream of water running into the bowl, something inside is not sealing. It is rarely serious, but it should not be ignored. A constantly running toilet wastes water, and on a metered supply that shows up on your bill."),
+      h2("Common causes"),
+      ul("A worn flush valve seal or flapper that lets water leak slowly into the bowl", "A fill valve that does not shut off properly because it is worn or set too high", "A float that has become stuck or misaligned", "Limescale on the valve seat, common in hard water areas", "A cracked overflow tube or fitting"),
+      h2("Simple checks"),
+      ol("Lift the cistern lid and look at the water level. If it is level with the overflow pipe, the fill valve is not closing.", "Gently adjust the float arm or float cup to see if the water stops at a lower level.", "Add a few drops of food colouring to the cistern. If colour appears in the bowl without flushing, the flush seal is leaking.", "Check that the flush handle is not catching and holding the valve open."),
+      h2("When to replace parts"),
+      p("Washers, seals and fill valves are inexpensive and are designed to be replaced. Replacing the mechanism is often quicker and more reliable than trying to repair old parts. If the cistern itself is cracked or obsolete, replacement is the better option."),
+      h2("When to call us"),
+      p("If a simple adjustment does not help, if you cannot find the cause, or if parts are hard to match, a plumber can diagnose and fix it in one visit. See our [taps, toilets and showers](/services/taps-toilets-and-showers) service, or [request a quote](/book).")
+    ],
+  },
+  {
+    slug: "blocked-toilet-what-to-try-first",
+    title: "Blocked toilet: what to try first and when to call a plumber",
+    metaDescription: "A blocked toilet is unpleasant but often fixable at home. Learn what to try, what to avoid and when it is time to call a plumber.",
+    excerpt: "Most blocked toilets can be cleared with patience and the right method. Here is what works and what to avoid.",
+    category: "Home advice",
+    date,
+    related: ["blocked-drains-and-toilets", "emergency-plumber"],
+    blocks: [
+      p("A toilet that will not flush is never convenient. Before you panic, there are a few safe things to try. Many blockages are caused by too much toilet paper or something that should not have been flushed."),
+      h2("Before you start"),
+      ul("Stop flushing. Adding more water can cause the bowl to overflow.", "Put on rubber gloves and lay old towels around the base.", "If the water level is high, scoop some out to a bucket so you have room to work."),
+      h2("What to try"),
+      ol("Use a proper toilet plunger with a flange, not a sink plunger. Make a good seal and push down and pull up steadily rather than sharply.", "Repeat for a minute or two. Often the water level will drop as the blockage clears.", "Pour a bucket of warm, not boiling, water into the bowl from waist height. The force can help clear the pipe. Boiling water can crack porcelain.", "If it is clearing slowly, wait a few minutes and try again."),
+      h2("What to avoid"),
+      ul("Strong chemical drain cleaners, which can damage pipes and make a later manual clearance unsafe", "Wire coat hangers and improvised tools that can scratch the bowl or push the blockage further in", "Flushing repeatedly to see if it works"),
+      h2("Signs the problem is bigger"),
+      p("If more than one fitting is slow, if water rises in a bath or shower when you flush, or if the blockage returns quickly, the problem may be further along the drain. That is when you need a plumber, and sometimes a camera survey. Our [blocked drains and toilets](/services/blocked-drains-and-toilets) page explains what we do."),
+      p("If the toilet is overflowing and you cannot stop it, turn off the small isolation valve behind or beside the cistern, or the main stopcock, and [get in touch as an emergency](/book).")
+    ],
+  },
+];
