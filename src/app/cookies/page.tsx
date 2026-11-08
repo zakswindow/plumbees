@@ -38,7 +38,7 @@ export default function Cookies() {
                 <tr><th scope="col">Type</th><th scope="col">Used on this website?</th><th scope="col">Notes</th></tr>
               </thead>
               <tbody>
-                <tr><th scope="row">Strictly necessary cookies</th><td>No</td><td>The site works without them, including the quote form.</td></tr>
+                <tr><th scope="row">Strictly necessary cookies</th><td>No</td><td>The site works without them, including the booking form.</td></tr>
                 <tr><th scope="row">Analytics or performance cookies</th><td>No</td><td>We do not measure visits with cookies or third-party tools.</td></tr>
                 <tr><th scope="row">Advertising or tracking cookies</th><td>No</td><td>We do not use them, and we do not share data with advertisers.</td></tr>
                 <tr><th scope="row">Local storage or similar</th><td>No</td><td>We do not store data in your browser.</td></tr>
@@ -54,7 +54,7 @@ export default function Cookies() {
 
           <h2>Information you send us</h2>
           <p>
-            If you use our quote form, we receive the details you type in so that we can reply. That is personal data rather than a cookie, and we explain how we use it in our <Link href="/privacy">privacy policy</Link>.
+            If you use our booking form, we receive the details you type in so that we can reply. That is personal data rather than a cookie, and we explain how we use it in our <Link href="/privacy">privacy policy</Link>.
           </p>
 
           <h2>The law that applies</h2>

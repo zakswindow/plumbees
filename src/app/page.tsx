@@ -10,6 +10,8 @@ import { HeatingNote } from "@/components/HeatingNote";
 import { TrustBar } from "@/components/TrustBar";
 import { BrandBand } from "@/components/BrandBand";
 import { Photo } from "@/components/Photo";
+import { HeroFlow } from "@/components/HeroFlow";
+import { AreasMarquee } from "@/components/AreasMarquee";
 import { images } from "@/lib/images";
 import { gbp, incVat, allPrices } from "@/lib/prices";
 
@@ -39,7 +41,7 @@ export default function Home() {
           <p className="eyebrow">Plumbers covering all of London</p>
           <h1>Plumbing that gets sorted properly</h1>
           <p className="lead">
-            Leaks, blockages, bathrooms and emergencies for homeowners, landlords and businesses. Tell us what is wrong and we will send you a clear, written quote.
+            Leaks, blockages, bathrooms and emergencies for homeowners, landlords and businesses. Tell us what is wrong and when suits you, and we will confirm your time and price.
           </p>
           <div className="hero-actions">
             <Link className="btn btn-light btn-lg" href="/book">Book a plumber</Link>
@@ -51,9 +53,14 @@ export default function Home() {
             <li>Emergency calls taken outside these hours</li>
           </ul>
           </div>
-          <Photo img={images.skyline} priority sizes="(max-width: 960px) 100vw, 520px" />
+          <HeroFlow />
         </div>
+        <svg className="hero-curve" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+          <path d="M0 90 L0 70 C 420 0, 1020 0, 1440 20 L1440 90 Z" />
+        </svg>
       </section>
+
+      <AreasMarquee />
 
       <TrustBar />
 
@@ -109,18 +116,21 @@ export default function Home() {
             <p>
               Plumbing problems look different depending on who is affected. A homeowner wants the leak fixed and the mess limited. A landlord wants the tenant looked after and the paperwork in order. A business wants minimal disruption.
             </p>
-            <p>We keep each of those in mind. You tell us who you are on the quote form, and we plan the visit and the reporting around it.</p>
+            <p>We keep each of those in mind. You tell us who you are when you book, and we plan the visit and the reporting around it.</p>
             <p><Link href="/about">More about Plumbees</Link></p>
           </div>
+          <div>
+          <Photo img={images.skyline} sizes="(max-width: 960px) 100vw, 520px" />
           <div className="panel">
             <h3>What you can expect</h3>
             <ul className="ticks">
               <li>Plain explanations without jargon</li>
-              <li>A written quote before any work begins</li>
+              <li>Your price agreed before any work begins</li>
               <li>Respect for your home and your time</li>
               <li>Clear communication about access and timing</li>
               <li>Work tested before we leave</li>
             </ul>
+          </div>
           </div>
         </div>
       </section>

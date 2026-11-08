@@ -170,8 +170,8 @@ export function QuoteJourney({ start, intro, phone, phoneHref, aside }: Props) {
   let help: string | undefined;
 
   if (current === ADDRESS) {
-    title = "Where is the job?";
-    help = "Start typing your postcode and choose your address from the list.";
+    title = "Where do you need us?";
+    help = "Enter the postcode and pick your address from the list. This is where our plumber will come.";
     body = (
       <>
         <AddressFinder value={address} onChange={setAddress} />

@@ -85,6 +85,7 @@ export function AddressFinder({ value, onChange }: Props) {
   if (value) {
     return (
       <div className="qj-address-card">
+        <p className="qj-address-label">We will come to:</p>
         <p className="qj-address">
           {[value.line1, value.line2, value.town, value.county, formatPostcode(value.postcode)].filter(Boolean).map((l) => (
             <span key={l}>{l}<br /></span>
@@ -134,7 +135,7 @@ export function AddressFinder({ value, onChange }: Props) {
   return (
     <div className="qj-finder">
       <div className="field">
-        <label htmlFor="addr-search">Postcode or first line of the address</label>
+        <label htmlFor="addr-search">Postcode</label>
         <input
           id="addr-search"
           type="text"
@@ -161,7 +162,7 @@ export function AddressFinder({ value, onChange }: Props) {
         </ul>
       )}
       {searching && shown.length === 0 && <p className="hint">Searching...</p>}
-      <button type="button" className="link-btn" onClick={() => setManual(true)}>Enter the address manually</button>
+      <button type="button" className="link-btn" onClick={() => setManual(true)}>Can't find it? Enter your address manually</button>
     </div>
   );
 }

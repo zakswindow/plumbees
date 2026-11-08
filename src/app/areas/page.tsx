@@ -39,7 +39,7 @@ export default function AreasPage() {
           <div className="prose narrow" style={{ marginTop: 48 }}>
             <h2>Somewhere else in London?</h2>
             <p>
-              The list above is not the whole map. We cover every London borough. If you are unsure whether we reach you, add your postcode to the quote form and we will tell you.
+              The list above is not the whole map. We cover every London borough. If you are unsure whether we reach you, start a booking with your postcode and we will tell you.
             </p>
           </div>
         </div>

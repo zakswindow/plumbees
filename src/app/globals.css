@@ -12,8 +12,8 @@
   --danger: #b3261e;
   --radius: 10px;
   --shadow: 0 1px 2px rgba(21, 33, 56, 0.06), 0 8px 24px rgba(21, 33, 56, 0.06);
-  --font-body: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  --font-display: "Sora", var(--font-body);
+  --font-body: var(--font-jakarta), system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-display: var(--font-body);
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -331,3 +331,102 @@ body:has(.qj, .qj-intro) .mobile-bar { display: none; }
 @media (max-width: 960px) { .price-grid { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 680px) { .price-grid, .price-grid.compact { grid-template-columns: 1fr; } }
 .aside-price { font-size: 1rem; } .aside-price strong { font-family: var(--font-display); font-size: 1.3rem; color: var(--navy); }
+
+/* Hero booking diagram (CSS and SVG only) */
+.flow { position: relative; width: 100%; max-width: 520px; aspect-ratio: 520 / 500; margin-inline: auto; color: #fff; font-size: clamp(11px, 1.35vw, 14px); }
+.flow-pipes { position: absolute; inset: 0; width: 100%; height: auto; aspect-ratio: 520 / 460; overflow: visible; }
+.pipe { fill: none; stroke: rgba(255, 255, 255, 0.16); stroke-width: 6; stroke-linecap: round; }
+.water { fill: none; stroke: #7fb6e8; stroke-width: 3; stroke-linecap: round; stroke-dasharray: 2 16; animation: water-run 1.6s linear infinite; filter: drop-shadow(0 0 3px rgba(127, 182, 232, 0.9)); }
+.water-top { animation-duration: 1.2s; }
+.joint { fill: #7fb6e8; }
+@keyframes water-run { to { stroke-dashoffset: -36; } }
+
+.flow-glow { position: absolute; left: 50%; top: 46.7%; width: 62%; aspect-ratio: 1; transform: translate(-50%, -50%); border-radius: 50%; background: radial-gradient(circle, rgba(57, 129, 195, 0.55) 0%, rgba(57, 129, 195, 0) 65%); animation: flow-breathe 6s ease-in-out infinite; pointer-events: none; }
+@keyframes flow-breathe { 0%, 100% { opacity: 0.55; } 50% { opacity: 1; } }
+
+.flow-card { position: absolute; background: rgba(255, 255, 255, 0.07); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 12px; backdrop-filter: blur(6px); box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25); }
+.flow-request { left: 22%; top: 0; width: 56%; height: 19.1%; padding: 0.8em 1em; display: flex; flex-direction: column; justify-content: center; gap: 0.25em; }
+.flow-label { font-size: 0.78em; letter-spacing: 0.12em; text-transform: uppercase; color: #9cc4ea; font-weight: 600; }
+.flow-title { font-family: var(--font-display); font-weight: 600; line-height: 1.25; }
+.flow-chip { align-self: flex-start; font-size: 0.82em; background: rgba(57, 129, 195, 0.35); border: 1px solid rgba(127, 182, 232, 0.5); border-radius: 99px; padding: 0.1em 0.7em; margin-top: 0.15em; }
+
+.flow-node { position: absolute; left: 38.85%; top: 34.1%; width: 22.3%; aspect-ratio: 1; border-radius: 50%; display: grid; place-items: center; background: radial-gradient(circle at 35% 30%, #4a93d6, #2a68a6 70%); border: 1px solid rgba(255, 255, 255, 0.35); box-shadow: 0 0 0 8px rgba(57, 129, 195, 0.15), 0 16px 40px rgba(0, 0, 0, 0.35); animation: flow-pulse 2.6s ease-in-out infinite; }
+.flow-node svg { width: 38%; height: auto; }
+@keyframes flow-pulse { 0%, 100% { transform: scale(1); box-shadow: 0 0 0 8px rgba(57, 129, 195, 0.15), 0 16px 40px rgba(0, 0, 0, 0.35); } 50% { transform: scale(1.05); box-shadow: 0 0 0 14px rgba(57, 129, 195, 0.22), 0 16px 40px rgba(0, 0, 0, 0.35); } }
+
+.flow-step { top: 76.5%; width: 30%; min-height: 13.5%; padding: 0.7em 0.8em; display: flex; align-items: center; gap: 0.55em; font-weight: 600; line-height: 1.25; }
+.flow-step-0 { left: 3.3%; }
+.flow-step-1 { left: 35%; }
+.flow-step-2 { left: 66.7%; }
+.flow-tick { flex: none; width: 1.15em; height: 1.15em; border-radius: 50%; border: 2px solid rgba(255, 255, 255, 0.45); position: relative; animation: flow-tick 4.8s ease-in-out infinite; }
+.flow-tick::after { content: ""; position: absolute; left: 0.3em; top: 0.12em; width: 0.28em; height: 0.52em; border: solid #fff; border-width: 0 2px 2px 0; transform: rotate(45deg); opacity: 0; animation: flow-tick-mark 4.8s ease-in-out infinite; }
+.flow-step-1 .flow-tick, .flow-step-1 .flow-tick::after { animation-delay: 0.6s; }
+.flow-step-2 .flow-tick, .flow-step-2 .flow-tick::after { animation-delay: 1.2s; }
+@keyframes flow-tick { 0%, 20% { background: transparent; border-color: rgba(255, 255, 255, 0.45); } 30%, 85% { background: #3981c3; border-color: #7fb6e8; } 100% { background: transparent; border-color: rgba(255, 255, 255, 0.45); } }
+@keyframes flow-tick-mark { 0%, 20% { opacity: 0; } 30%, 85% { opacity: 1; } 100% { opacity: 0; } }
+
+.flow-caption { position: absolute; left: 0; right: 0; bottom: 0; margin: 0; text-align: center; font-size: 0.9em; color: #9cc4ea; }
+
+@media (max-width: 960px) { .flow { max-width: 460px; font-size: clamp(11px, 2.9vw, 14px); } }
+@media (max-width: 420px) { .flow-step { padding: 0.55em; gap: 0.4em; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .water, .flow-glow, .flow-node, .flow-tick, .flow-tick::after { animation: none; }
+  .water { stroke-dasharray: none; opacity: 0.6; }
+  .flow-tick { background: #3981c3; border-color: #7fb6e8; }
+  .flow-tick::after { opacity: 1; }
+}
+
+/* ---- Polish: typography ---- */
+h1, h2, h3 { text-wrap: balance; }
+h1 { letter-spacing: -0.025em; font-weight: 800; }
+h2 { letter-spacing: -0.02em; }
+h3 { font-weight: 700; letter-spacing: -0.01em; }
+p, li { text-wrap: pretty; }
+.price-inc, .price-teaser strong, .aside-price strong, .stat { font-variant-numeric: tabular-nums; }
+.btn { letter-spacing: -0.005em; }
+
+/* ---- Curved hero edge ---- */
+.hero .container { padding-bottom: 120px; }
+.hero-curve { position: absolute; left: 0; right: 0; bottom: -1px; width: 100%; height: 70px; display: block; }
+.hero-curve path { fill: #fff; }
+@media (max-width: 620px) { .hero .container { padding-bottom: 80px; } .hero-curve { height: 36px; } }
+
+/* ---- Areas marquee ---- */
+.marquee { padding: 8px 0 28px; border-bottom: 1px solid var(--line); background: #fff; }
+.marquee-title { text-align: center; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--blue-text); margin: 0 0 16px; }
+.marquee-mask { overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
+.marquee-track { display: flex; width: max-content; animation: marquee 60s linear infinite; }
+.marquee-track:hover, .marquee-track:focus-within { animation-play-state: paused; }
+.marquee-list { display: flex; gap: 12px; list-style: none; margin: 0; padding: 0 6px; }
+.marquee-list a, .marquee-list span { display: inline-block; white-space: nowrap; padding: 8px 18px; border-radius: 99px; border: 1px solid var(--line); background: var(--bg-alt); color: var(--navy); font-weight: 600; font-size: 0.95rem; text-decoration: none; }
+.marquee-list a:hover { border-color: var(--blue); background: var(--blue-soft); }
+@keyframes marquee { to { transform: translateX(-50%); } }
+
+/* ---- Header shadow once scrolled (scroll-driven, no JS) ---- */
+@supports (animation-timeline: scroll()) {
+  .site-header { animation: header-lift linear both; animation-timeline: scroll(root); animation-range: 0 80px; }
+  @keyframes header-lift { from { box-shadow: 0 0 0 rgba(21, 33, 56, 0); } to { box-shadow: 0 8px 24px rgba(21, 33, 56, 0.08); } }
+}
+
+/* ---- Gentle reveal as sections enter the screen (CSS only) ---- */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    main .section .card, main .section .section-head, main .section .panel, main .section .price-card,
+    main .section .photo, main .section .faq details, main .trustbar-grid > div, main .price-assure {
+      animation: reveal linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 35%;
+    }
+  }
+  @keyframes reveal { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: none; } }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track { animation: none; width: auto; }
+  .marquee-mask { -webkit-mask-image: none; mask-image: none; }
+  .marquee-list { flex-wrap: wrap; justify-content: center; padding: 0 16px; }
+  .marquee-dup { display: none; }
+  .site-header { animation: none; }
+}
+.qj-address-label { margin: 0 0 6px; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--blue-text); }

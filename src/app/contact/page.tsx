@@ -17,7 +17,7 @@ export default function ContactPage() {
       <PageHero
         crumbs={[{ name: "Home", href: "/" }, { name: "Contact" }]}
         title="Contact us"
-        lead="The quickest way to start is the quote form. We will reply with a clear, written price."
+        lead="The quickest way to start is to book online. Tell us what is wrong and when suits you, and we will call to confirm your time and price."
       />
       <section className="section">
         <div className="container grid grid-3">

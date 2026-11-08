@@ -18,8 +18,8 @@ export function TrustBar() {
           <span>Homes, landlords and businesses</span>
         </div>
         <div>
-          <strong>Written quote first</strong>
-          <span>Agreed with you before work starts</span>
+          <strong>Price agreed first</strong>
+          <span>Confirmed with you before work starts</span>
         </div>
       </div>
     </section>

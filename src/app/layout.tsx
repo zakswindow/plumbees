@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Sora } from "next/font/google";
+import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -9,8 +9,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { nav, phoneHref, site } from "@/lib/site";
 import { graph, organizationSchema, websiteSchema } from "@/lib/seo";
 
-const body = Inter({ subsets: ["latin"], variable: "--font-body", display: "swap" });
-const display = Sora({ subsets: ["latin"], variable: "--font-display", display: "swap" });
+const jakarta = Plus_Jakarta_Sans({ subsets: ["latin"], variable: "--font-jakarta", display: "swap" });
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
@@ -30,7 +29,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en-GB" className={`${body.variable} ${display.variable}`}>
+    <html lang="en-GB" className={jakarta.variable}>
       <body>
         <a className="skip-link" href="#main">Skip to content</a>
         <JsonLd data={graph(organizationSchema(), websiteSchema())} />
