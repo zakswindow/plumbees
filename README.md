@@ -12,12 +12,24 @@ npm run dev
 ## Checks
 `npm run lint`, `npm run typecheck`, `npm run build`, `npm run audit` (fails on high or critical), `node scripts/check-pinned.mjs`.
 
-## Deploy to EC2
-1. Install Docker and nginx. Copy `deploy/nginx.conf` to `/etc/nginx/conf.d/`, add the certificate, reload.
-2. Create `.env` on the server from `.env.example`. `SITE_URL`, `SITE_PHONE` and `SITE_EMAIL` are baked in at build time.
-3. `docker compose up -d --build`. The container listens on 127.0.0.1:3000 only.
-4. Attach an IAM role to the instance allowing `ses:SendEmail` from the verified sender identity. No keys are stored.
-5. Verify the SES domain (DKIM, SPF, DMARC) and request production access to leave the SES sandbox.
+## Deploy to EC2 (PM2 and nginx, behind Cloudflare)
+The server never builds. `scripts/deploy.sh` builds here, ships a release, installs production dependencies on the server (checked against the lockfile hashes), switches a `current` symlink, restarts only the `plumbees` PM2 process, health-checks it and rolls back if the check fails.
+
+**One-off server setup (fresh Amazon Linux 2023 only)**
+1. Create the instance from the standard Amazon Linux image with a new key pair, SSH from your own IP only, ports 80 and 443 open, and an IAM role limited to `ses:SendEmail`.
+2. Run `scripts/server-setup.sh` on it (read it first). It installs Node 22, nginx and PM2 and turns on automatic security updates.
+3. Create a Cloudflare Origin certificate for `plumbees.co.uk` and `*.plumbees.co.uk`. Save it as `/etc/nginx/ssl/plumbees.co.uk.pem` and `/etc/nginx/ssl/plumbees.key` (key `chmod 600`, owned by root).
+4. Copy `deploy/server.env.example` to `/home/ec2-user/plumbees/.env`, fill it in, `chmod 600`. Use new keys, never copies from another server.
+5. Copy `deploy/nginx.conf` to `/etc/nginx/conf.d/plumbees.conf`, run `sudo nginx -t`, then `sudo systemctl start nginx`.
+6. In Cloudflare: add the DNS records pointing at the server, set SSL/TLS mode to Full (strict), and verify the sending address in SES.
+
+**Each deploy**
+```bash
+DEPLOY_HOST=ec2-user@<server-ip> DEPLOY_KEY=~/.ssh/<key>.pem bash scripts/deploy.sh
+```
+`SITE_URL`, `SITE_PHONE` and `SITE_REVIEWS_URL` are baked in at build time (defaults are in the script). `bash scripts/deploy.sh --build-only` assembles the release without needing a server.
+
+The Dockerfile and compose file are kept for local use but production runs on PM2.
 
 ## Security
 - Dependencies are pinned to exact versions. `package-lock.json` holds sha512 integrity hashes and `npm ci` verifies them. Install scripts are disabled.

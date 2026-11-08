@@ -162,7 +162,7 @@ export function AddressFinder({ value, onChange }: Props) {
         </ul>
       )}
       {searching && shown.length === 0 && <p className="hint">Searching...</p>}
-      <button type="button" className="link-btn" onClick={() => setManual(true)}>Can't find it? Enter your address manually</button>
+      <button type="button" className="link-btn" onClick={() => setManual(true)}>Can&apos;t find it? Enter your address manually</button>
     </div>
   );
 }
