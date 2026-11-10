@@ -15,17 +15,26 @@ npm run dev
 ## Deploy to EC2 (PM2 and nginx, behind Cloudflare)
 The server never builds. `scripts/deploy.sh` builds here, ships a release, installs production dependencies on the server (checked against the lockfile hashes), switches a `current` symlink, restarts only the `plumbees` PM2 process, health-checks it and rolls back if the check fails.
 
-**One-off server setup (fresh Amazon Linux 2023 only)**
-1. Create the instance from the standard Amazon Linux image with a new key pair, SSH from your own IP only, ports 80 and 443 open, and an IAM role limited to `ses:SendEmail`.
-2. Run `scripts/server-setup.sh` on it (read it first). It installs Node 22, nginx and PM2 and turns on automatic security updates.
-3. Create a Cloudflare Origin certificate for `plumbees.co.uk` and `*.plumbees.co.uk`. Save it as `/etc/nginx/ssl/plumbees.co.uk.pem` and `/etc/nginx/ssl/plumbees.key` (key `chmod 600`, owned by root).
-4. Copy `deploy/server.env.example` to `/home/ec2-user/plumbees/.env`, fill it in, `chmod 600`. Use new keys, never copies from another server.
-5. Copy `deploy/nginx.conf` to `/etc/nginx/conf.d/plumbees.conf`, run `sudo nginx -t`, then `sudo systemctl start nginx`.
-6. In Cloudflare: add the DNS records pointing at the server, set SSL/TLS mode to Full (strict), and verify the sending address in SES.
+**One-off server setup (Ubuntu 26.04, alongside Heatingology)**
+Plumbees is built to share a server with Heatingology's `scripts/server/setup.sh`. Run that script first. Plumbees then adds only its own pieces and never edits Heatingology's:
+
+| | Heatingology | Plumbees |
+|---|---|---|
+| Unix user and PM2 daemon | `heatingology` | `plumbees` |
+| App port (127.0.0.1 only) | 3000 | 3001 |
+| nginx files | `heatingology*` | `plumbees*` (own rate-limit zones) |
+| Certificate folder | `/etc/ssl/heatingology` | `/etc/ssl/plumbees` |
+| Firewall, SSH, fail2ban, real-IP | set by its script | untouched, reused |
+
+1. Create a Cloudflare Origin certificate for `plumbees.co.uk` and `*.plumbees.co.uk`.
+2. Copy `scripts/server-setup.sh` and the `deploy/` files to the server and run `sudo bash server-setup.sh --cert origin.pem --key origin.key` (read it first). Without a certificate it makes a temporary self-signed one, so keep Cloudflare on Full until you re-run it with the real one.
+3. No `.env` file on the server. Settings are SecureString parameters under `/plumbees/prod`: `SES_FROM`, `QUOTE_NOTIFY_TO`, `QUOTE_REPLY_TO`, `IDEALPOSTCODES_API_KEY`, `TRUST_PROXY` (1), and optionally `SITE_URL`, `AWS_REGION`. `deploy/start.mjs` reads them at start-up and refuses to start if a required one is missing. Use new keys, never copies from another server.
+4. Give the instance role `ses:SendEmail` and `ssm:GetParametersByPath` on `/plumbees/prod` only (plus `kms:Decrypt` if you use your own KMS key), and verify the sending address in SES.
+5. In Cloudflare: add the DNS records last, and set SSL/TLS mode to Full (strict).
 
 **Each deploy**
 ```bash
-DEPLOY_HOST=ec2-user@<server-ip> DEPLOY_KEY=~/.ssh/<key>.pem bash scripts/deploy.sh
+DEPLOY_HOST=<admin-user>@<server-ip> DEPLOY_KEY=~/.ssh/<key> bash scripts/deploy.sh
 ```
 `SITE_URL`, `SITE_PHONE` and `SITE_REVIEWS_URL` are baked in at build time (defaults are in the script). `bash scripts/deploy.sh --build-only` assembles the release without needing a server.
 
