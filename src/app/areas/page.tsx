@@ -22,10 +22,15 @@ export default function AreasPage() {
       />
       <section className="section">
         <div className="container">
+          <nav className="jump" aria-label="Jump to a part of London">
+            {REGIONS.map(([region, label]) => (
+              <a key={region} href={`#region-${region}`}>{label}</a>
+            ))}
+          </nav>
           {REGIONS.map(([region, label]) => (
-            <div key={region} style={{ marginBottom: 40 }}>
+            <div key={region} id={`region-${region}`} className="region">
               <h2>{label}</h2>
-              <div className="grid grid-3">
+              <div className="grid grid-3 area-grid">
                 {areas.filter((a) => a.region === region).map((a) => (
                   <Link key={a.slug} href={`/areas/${a.slug}`} className="card card-link">
                     <h3>{a.name}</h3>

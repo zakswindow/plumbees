@@ -11,6 +11,7 @@ import { TrustBar } from "@/components/TrustBar";
 import { BrandBand } from "@/components/BrandBand";
 import { Photo } from "@/components/Photo";
 import { HeroFlow } from "@/components/HeroFlow";
+import { HowItWorks } from "@/components/HowItWorks";
 import { AreasMarquee } from "@/components/AreasMarquee";
 import { images } from "@/lib/images";
 import { gbp, incVat, allPrices } from "@/lib/prices";
@@ -85,28 +86,7 @@ export default function Home() {
 
       <BrandBand />
 
-      <section className="section alt" aria-labelledby="how-h">
-        <div className="container">
-          <div className="section-head">
-            <p className="eyebrow">How it works</p>
-            <h2 id="how-h">A simple, quote-first process</h2>
-          </div>
-          <div className="grid grid-4">
-            {[
-              ["01", "Tell us the problem", "Fill in the short form or call us. Include your postcode and how urgent it is."],
-              ["02", "Receive a written quote", "We review the details and come back with a clear price and what it covers."],
-              ["03", "Agree and book", "Approve the quote and we arrange a time that suits you."],
-              ["04", "We fix it", "We do the work, test it and explain what we found before we leave."],
-            ].map(([n, t, d]) => (
-              <div key={n} className="card">
-                <div className="step-n">{n}</div>
-                <h3>{t}</h3>
-                <p>{d}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <HowItWorks />
 
       <section className="section" aria-labelledby="who-h">
         <div className="container split">

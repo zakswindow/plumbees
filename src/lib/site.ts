@@ -11,7 +11,7 @@ export const site = {
   },
   url: (process.env.SITE_URL || "https://www.plumbees.co.uk").replace(/\/$/, ""),
   phone: process.env.SITE_PHONE?.trim() || "",
-  email: process.env.SITE_EMAIL?.trim() || "",
+  email: process.env.SITE_EMAIL?.trim() || "hello@plumbees.co.uk",
   tagline: "Plumbing for London homes and businesses",
   heatingUrl: "https://www.heatingology.co.uk",
   reviewsUrl: process.env.SITE_REVIEWS_URL?.trim() || "",

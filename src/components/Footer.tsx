@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Logo } from "./Logo";
-import { site, phoneHref } from "@/lib/site";
+import { site } from "@/lib/site";
 import { services } from "@/lib/services";
 import { areas } from "@/lib/areas";
 
@@ -14,10 +14,12 @@ export function Footer() {
         <div>
           <Logo variant="white" height={32} />
           <p className="footer-blurb">Plumbing repairs, emergencies and installations for homes, landlords and businesses across London.</p>
-          {site.phone && <p><a href={phoneHref}>{site.phone}</a></p>}
+          <div className="footer-talk">
+            <h2 className="footer-h">Talk to us</h2>
+            {site.email && <p><a href={`mailto:${site.email}`}>{site.email}</a></p>}
+          </div>
           <p>Open {site.hours.summary}. Emergency calls taken outside these hours.</p>
           <p>Part of <a href={site.heatingUrl} rel="noopener">Heatingology</a>, rated 5 stars on Google.</p>
-          {site.email && <p><a href={`mailto:${site.email}`}>{site.email}</a></p>}
         </div>
         <nav aria-label="Services">
           <h2 className="footer-h">Services</h2>
