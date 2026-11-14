@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Logo } from "./Logo";
+import { CookieSettingsButton } from "./CookieConsent";
 import { site } from "@/lib/site";
 import { services } from "@/lib/services";
 import { areas } from "@/lib/areas";
@@ -49,6 +50,7 @@ export function Footer() {
             <li><Link href="/book">Book a plumber</Link></li>
             <li><Link href="/privacy">Privacy policy</Link></li>
             <li><Link href="/cookies">Cookie policy</Link></li>
+            <li><CookieSettingsButton /></li>
             <li><Link href="/terms">Website terms</Link></li>
           </ul>
         </nav>

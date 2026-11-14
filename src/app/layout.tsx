@@ -6,6 +6,7 @@ import { Footer } from "@/components/Footer";
 import { MobileBar } from "@/components/MobileBar";
 import { TopBar } from "@/components/TopBar";
 import { JsonLd } from "@/components/JsonLd";
+import { CookieConsent } from "@/components/CookieConsent";
 import { nav, phoneHref, site } from "@/lib/site";
 import { graph, organizationSchema, websiteSchema } from "@/lib/seo";
 
@@ -38,6 +39,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main id="main">{children}</main>
         <Footer />
         <MobileBar />
+        <CookieConsent />
       </body>
     </html>
   );
