@@ -12,7 +12,7 @@ export const metadata = pageMetadata({
 export default function Privacy() {
   return (
     <>
-      <PageHero crumbs={[{ name: "Home", href: "/" }, { name: "Privacy policy" }]} title="Privacy policy" lead="Last updated: 8 November 2026" />
+      <PageHero crumbs={[{ name: "Home", href: "/" }, { name: "Privacy policy" }]} title="Privacy policy" lead="Last updated: 14 November 2026" />
       <section className="section">
         <div className="container narrow prose">
           <h2>Who we are</h2>
@@ -26,10 +26,11 @@ export default function Privacy() {
             <li>To reply to your request and prepare a quote. This is necessary to take steps at your request before entering a contract.</li>
             <li>To carry out and keep records of work, and to meet legal and accounting duties. This is a contract and legal obligation basis.</li>
             <li>To keep our website secure and prevent abuse. This is our legitimate interest.</li>
+            <li>To measure how the website is used, if you accept analytics cookies. This is your consent.</li>
           </ul>
           <p>We do not use your details for marketing unless you tell us you would like to hear from us.</p>
           <h2>Who we share it with</h2>
-          <p>We use Amazon Web Services to host this website and to send email, Ideal Postcodes to suggest addresses as you type a postcode, and Stripe to process payments. They process data on our instructions. We do not sell your data. We may share information with professional advisers, insurers or authorities where the law requires it.</p>
+          <p>We use Amazon Web Services to host this website and to send email, Ideal Postcodes to suggest addresses as you type a postcode, Stripe to process payments, and Google Analytics to measure website use if you accept analytics cookies. They process data on our instructions. We do not sell your data. We may share information with professional advisers, insurers or authorities where the law requires it.</p>
           <h2>How long we keep it</h2>
           <p>If we do not carry out work for you, we keep your enquiry for up to 12 months, then delete it. If we carry out work, we keep the relevant records for as long as needed for warranty, tax and legal purposes, which is usually six years.</p>
           <h2>Your rights</h2>
@@ -37,7 +38,8 @@ export default function Privacy() {
             You can ask to see the data we hold about you, correct it, have it deleted, restrict or object to our use of it, or receive a copy in a portable format. To do so, contact us using the details on our <Link href="/contact">contact page</Link>. If you are unhappy with how we handle your data, you can complain to the Information Commissioner&rsquo;s Office at <a href="https://ico.org.uk" rel="noopener">ico.org.uk</a>.
           </p>
           <h2>Cookies and similar technologies</h2>
-          <p>This website does not set cookies or use analytics, advertising or tracking tools. Our <Link href="/cookies">cookie policy</Link> explains this in full, and what we will do if that changes.</p>
+          <p>If you accept analytics cookies, we use Google Analytics to see how visitors use the website. It collects information such as the pages you visit, how you arrived, your device and browser type, and your approximate location. Google Analytics does not log or store IP addresses. Our lawful basis is your consent, which you can withdraw at any time using the Cookie settings link at the bottom of every page. If you do not accept, Google Analytics is not loaded. We keep analytics data for 14 months.</p>
+          <p>Google may process this data in the United States. Transfers are covered by the UK&ndash;US data bridge and Google&rsquo;s standard contractual clauses. Our <Link href="/cookies">cookie policy</Link> lists every cookie we use.</p>
           <h2>Marketing and email</h2>
           <p>We use your email address and phone number to reply to your request and to send you the confirmation of it. We do not send marketing emails or texts. If that ever changes, we will only do it with your consent, as the Privacy and Electronic Communications Regulations 2003 require, and you will be able to opt out at any time.</p>
           <h2>Security</h2>

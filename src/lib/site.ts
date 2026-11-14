@@ -17,6 +17,8 @@ export const site = {
   reviewsUrl: process.env.SITE_REVIEWS_URL?.trim() || "",
   hours: { summary: "9am to 6pm, seven days a week", opens: "09:00", closes: "18:00" },
   emergency: "Emergency calls taken outside these hours",
+  /** Google Tag Manager container (loads Google Analytics). Only loaded after cookie consent. */
+  gtmId: "GTM-NBR28D27",
 } as const;
 
 export const phoneHref = site.phone

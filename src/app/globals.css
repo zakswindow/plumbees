@@ -581,3 +581,14 @@ p, li { text-wrap: pretty; }
    stretches a one-column mobile grid past the screen and the whole page looks shifted sideways. */
 .split > *, .grid > *, .hero-grid > *, .footer-grid > *, .cta-inner > * { min-width: 0; }
 html, body { overflow-x: clip; }
+
+/* Cookie consent */
+.cookie-banner { position: fixed; left: 0; right: 0; bottom: 0; z-index: 70; padding: 16px 0 calc(16px + env(safe-area-inset-bottom)); background: #fff; border-top: 1px solid var(--line); box-shadow: 0 -6px 20px rgba(21,33,56,0.12); }
+.cookie-banner-inner { display: flex; align-items: center; justify-content: space-between; gap: 16px 24px; flex-wrap: wrap; }
+.cookie-banner p { margin: 0; flex: 1 1 420px; color: var(--ink); font-size: 0.95rem; }
+.cookie-banner-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+.cookie-banner-actions .btn { flex: 1 1 auto; }
+.link-button { background: none; border: 0; padding: 0; font: inherit; color: inherit; text-decoration: underline; cursor: pointer; }
+@media print { .cookie-banner { display: none; } }
+.site-footer .link-button { color: #e6edf8; text-decoration: none; }
+.site-footer .link-button:hover { text-decoration: underline; }
