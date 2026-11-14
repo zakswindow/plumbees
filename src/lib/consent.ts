@@ -1,6 +1,6 @@
 /**
- * Analytics consent, stored in one first-party cookie. Google Tag Manager (and so
- * Google Analytics) is only loaded once the visitor has accepted, as PECR requires.
+ * Analytics consent, stored in one first-party cookie. Google Tag Manager loads with
+ * all consent denied (Consent Mode). Analytics tags and cookies only start once the visitor has accepted, as PECR requires.
  */
 
 export type Consent = "granted" | "denied" | "unset";

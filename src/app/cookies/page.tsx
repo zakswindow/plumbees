@@ -24,7 +24,7 @@ export default function Cookies() {
         <div className="container narrow prose">
           <h2>The short version</h2>
           <p>
-            We use Google Analytics to understand how people use this website, so that we can improve it. Google Analytics sets cookies, so we only load it if you click &ldquo;Accept analytics&rdquo; on our cookie banner. If you reject, or ignore the banner, no analytics cookies are set and no analytics code runs. We do not use advertising cookies.
+            We use Google Analytics to understand how people use this website, so that we can improve it. Google Analytics sets cookies, so we only switch it on if you click &ldquo;Accept analytics&rdquo; on our cookie banner. We load Google Tag Manager on every page to manage our tags, but it is told from the start that you have not agreed to anything. If you reject, or ignore the banner, no analytics tag runs and no analytics cookies are set. We do not use advertising cookies.
           </p>
           <p>
             You can change your mind at any time using the <strong>Cookie settings</strong> link at the bottom of every page. If you withdraw consent, we delete the analytics cookies from your browser.
@@ -50,6 +50,11 @@ export default function Cookies() {
           </div>
           <p>
             Google Analytics is provided by Google Ireland Limited and Google LLC. It tells us things like which pages are visited, how people arrive at the site and roughly where in the world they are. We have switched off advertising features: we tell Google that consent for advertising storage, advertising data and personalised advertising is refused. Google explains how it uses this data at <a href="https://policies.google.com/technologies/partner-sites" rel="noopener">policies.google.com</a>. Our <Link href="/privacy">privacy policy</Link> has more about how we handle the data.
+          </p>
+
+          <h2>Visit counting without cookies</h2>
+          <p>
+            We also use Cloudflare Web Analytics, which counts visits to our pages (which pages are viewed, the country visitors come from, and the type of device and browser). It does not use cookies, does not store anything on your device, and does not track you from one website to another. Because it does not store or read anything on your device, it does not need your consent, so it runs for everyone. You can read more at <a href="https://www.cloudflare.com/web-analytics/" rel="noopener">cloudflare.com</a>.
           </p>
 
           <h2>What we do not use</h2>
@@ -78,7 +83,7 @@ export default function Cookies() {
 
           <h2>The law that applies</h2>
           <p>
-            In the UK, the use of cookies and similar technologies is governed by the Privacy and Electronic Communications Regulations 2003 (PECR), together with the UK General Data Protection Regulation, the Data Protection Act 2018 and the Data (Use and Access) Act 2025. In short, a website must tell you about the cookies it uses and ask for your consent before setting any that are not strictly necessary. That is why analytics cookies are only set after you accept them, and why rejecting is as easy as accepting. The Information Commissioner&rsquo;s Office (ICO) regulates this and publishes guidance at <a href="https://ico.org.uk/for-organisations/direct-marketing-and-privacy-and-electronic-communications/guidance-on-the-use-of-storage-and-access-technologies/" rel="noopener">ico.org.uk</a>.
+            In the UK, the use of cookies and similar technologies is governed by the Privacy and Electronic Communications Regulations 2003 (PECR), together with the UK General Data Protection Regulation, the Data Protection Act 2018 and the Data (Use and Access) Act 2025. In short, a website must tell you about the cookies it uses and ask for your consent before setting any that are not strictly necessary. That is why analytics tags and cookies are only switched on after you accept, and why rejecting is as easy as accepting. The Information Commissioner&rsquo;s Office (ICO) regulates this and publishes guidance at <a href="https://ico.org.uk/for-organisations/direct-marketing-and-privacy-and-electronic-communications/guidance-on-the-use-of-storage-and-access-technologies/" rel="noopener">ico.org.uk</a>.
           </p>
 
           <h2>If this changes</h2>
