@@ -52,6 +52,11 @@ export default function Cookies() {
             Google Analytics is provided by Google Ireland Limited and Google LLC. It tells us things like which pages are visited, how people arrive at the site and roughly where in the world they are. We have switched off advertising features: we tell Google that consent for advertising storage, advertising data and personalised advertising is refused. Google explains how it uses this data at <a href="https://policies.google.com/technologies/partner-sites" rel="noopener">policies.google.com</a>. Our <Link href="/privacy">privacy policy</Link> has more about how we handle the data.
           </p>
 
+          <h2>Visit counting without cookies</h2>
+          <p>
+            We also use Cloudflare Web Analytics, which counts visits to our pages (which pages are viewed, the country visitors come from, and the type of device and browser). It does not use cookies, does not store anything on your device, and does not track you from one website to another. Because it does not store or read anything on your device, it does not need your consent, so it runs for everyone. You can read more at <a href="https://www.cloudflare.com/web-analytics/" rel="noopener">cloudflare.com</a>.
+          </p>
+
           <h2>What we do not use</h2>
           <div className="table-wrap">
             <table className="table">
