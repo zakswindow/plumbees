@@ -10,7 +10,8 @@ import { HeatingNote } from "@/components/HeatingNote";
 import { TrustBar } from "@/components/TrustBar";
 import { BrandBand } from "@/components/BrandBand";
 import { Photo } from "@/components/Photo";
-import { HeroFlow } from "@/components/HeroFlow";
+import Image from "next/image";
+import { Stars } from "@/components/Stars";
 import { HowItWorks } from "@/components/HowItWorks";
 import { AreasMarquee } from "@/components/AreasMarquee";
 import { images } from "@/lib/images";
@@ -40,12 +41,12 @@ export default function Home() {
         <div className="container hero-grid">
           <div>
           <p className="eyebrow">Plumbers covering all of London</p>
-          <h1>Plumbing that gets sorted properly</h1>
+          <h1>Friendly London plumbers who fix it <span className="swash">properly</span></h1>
           <p className="lead">
-            Leaks, blockages, bathrooms and emergencies for homeowners, landlords and businesses. Tell us what is wrong and when suits you, and we will confirm your time and price.
+            Leaks, blockages, bathrooms and emergencies, looked after by people who treat your home with care. Tell us what is wrong and when suits you, and we will confirm your time and price.
           </p>
           <div className="hero-actions">
-            <Link className="btn btn-light btn-lg" href="/book">Book a plumber</Link>
+            <Link className="btn btn-light btn-lg" href="/book">Book Plumbees</Link>
             {site.phone && <a className="btn btn-outline-light btn-lg" href={phoneHref}>Call {site.phone}</a>}
           </div>
           <ul className="hero-points">
@@ -54,12 +55,15 @@ export default function Home() {
             <li>Emergency calls taken outside these hours</li>
           </ul>
           </div>
-          <HeroFlow />
+          <figure className="hero-photo">
+            <div className="hero-photo-frame">
+              <Image src={images.skyline.src} alt={images.skyline.alt} width={images.skyline.width} height={images.skyline.height} sizes="(max-width: 960px) 90vw, 460px" priority quality={75} />
+            </div>
+            <div className="hero-chip hero-chip-b"><Stars size={16} /><span>5 stars<small>on Google</small></span></div>
+            <div className="hero-chip hero-chip-a"><span>Open 9am to 6pm<small>seven days a week</small></span></div>
+          </figure>
         </div>
-        <svg className="hero-curve" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true" focusable="false">
-          <path d="M0 90 L0 70 C 420 0, 1020 0, 1440 20 L1440 90 Z" />
-        </svg>
-      </section>
+              </section>
 
       <AreasMarquee />
 

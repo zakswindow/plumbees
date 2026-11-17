@@ -13,7 +13,7 @@ export function QuotePage({ start, path }: { start: string; path: string }) {
   const intro = from !== null ? { ...base, benefits: [`Typical prices from ${gbp(from)}`, ...base.benefits] } : base;
   return (
     <>
-      <JsonLd data={graph(breadcrumbSchema([{ name: "Home", path: "/" }, { name: STARTS[start]?.node === "BA1" ? "Get a quote" : "Book a plumber", path }]))} />
+      <JsonLd data={graph(breadcrumbSchema([{ name: "Home", path: "/" }, { name: STARTS[start]?.node === "BA1" ? "Get a quote" : "Book Plumbees", path }]))} />
       <QuoteJourney
         key={start}
         start={start}
