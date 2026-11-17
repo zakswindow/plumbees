@@ -83,7 +83,7 @@ export function HowItWorks() {
         </div>
 
         <p className="how-cta">
-          <Link className="btn btn-light btn-lg" href="/book">Book a plumber</Link>
+          <Link className="btn btn-light btn-lg" href="/book">Book Plumbees</Link>
         </p>
       </div>
     </section>

@@ -47,7 +47,7 @@ export function Footer() {
             <li><Link href="/blog">Blog</Link></li>
             <li><Link href="/contact">Contact</Link></li>
             <li><a href={site.heatingUrl} rel="noopener">Boilers and heating</a></li>
-            <li><Link href="/book">Book a plumber</Link></li>
+            <li><Link href="/book">Book Plumbees</Link></li>
             <li><Link href="/privacy">Privacy policy</Link></li>
             <li><Link href="/cookies">Cookie policy</Link></li>
             <li><CookieSettingsButton /></li>

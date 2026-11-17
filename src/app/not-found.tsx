@@ -11,7 +11,7 @@ export default function NotFound() {
         <p className="lead">It may have moved or the address may be mistyped.</p>
         <p style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
           <Link className="btn btn-primary" href="/">Go to the homepage</Link>
-          <Link className="btn btn-outline" href="/book">Book a plumber</Link>
+          <Link className="btn btn-outline" href="/book">Book Plumbees</Link>
         </p>
       </div>
     </section>

@@ -10,7 +10,7 @@ export function Cta({ title = "Need a plumber in London?", text = "Tell us what 
           <p>{text}</p>
         </div>
         <div className="cta-actions">
-          <Link className="btn btn-light" href="/book">Book a plumber</Link>
+          <Link className="btn btn-light" href="/book">Book Plumbees</Link>
           {site.phone && <a className="btn btn-outline-light" href={phoneHref}>Call {site.phone}</a>}
         </div>
       </div>

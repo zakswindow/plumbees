@@ -125,7 +125,7 @@ const nodes: FlowNode[] = [
   {
     kind: "choice", id: "BA2", title: "Where are you with the project?", summary: "Project stage",
     options: [
-      o("planning", "Just planning", "BA3"), o("ready", "Ready to book a plumber", "BA3"), o("builder", "A builder is already working on it", "BA3"),
+      o("planning", "Just planning", "BA3"), o("ready", "Ready to book Plumbees", "BA3"), o("builder", "A builder is already working on it", "BA3"),
     ],
   },
   {

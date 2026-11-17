@@ -7,7 +7,7 @@ const benefits = ["Takes about two minutes", "Choose a day and time that suits y
 
 export const INTROS: Record<string, Intro> = {
   general: {
-    headline: "Book a plumber",
+    headline: "Book Plumbees",
     lead: "Answer a few quick questions about the job, choose when suits you, and we will call to confirm your time and price.",
     benefits, image: images.skyline,
   },

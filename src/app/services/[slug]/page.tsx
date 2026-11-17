@@ -50,13 +50,13 @@ export default async function ServicePage({ params }: Props) {
             <h2>What is included</h2>
             <ul className="ticks">{s.included.map((i) => <li key={i}>{i}</li>)}</ul>
           </div>
-          <aside className="panel" aria-label={s.slug === "bathroom-plumbing" ? "Get a quote" : "Book a plumber"}>
+          <aside className="panel" aria-label={s.slug === "bathroom-plumbing" ? "Get a quote" : "Book Plumbees"}>
             <h3>{s.slug === "bathroom-plumbing" ? "Get a written quote" : "Book online"}</h3>
             {fromPrice(s.slug) !== null && (
               <p className="aside-price">Typical prices from <strong>{gbp(fromPrice(s.slug)!)}</strong></p>
             )}
             <p>{s.slug === "bathroom-plumbing" ? "Tell us about the project and we will send you a written quote, broken down by stage." : "Tell us what is wrong and when suits you. We will call to confirm your time and price."}</p>
-            <p><Link className="btn btn-primary" href={`/quote/${s.slug}`}>{s.slug === "bathroom-plumbing" ? "Get a free quote" : "Book a plumber"}</Link></p>
+            <p><Link className="btn btn-primary" href={`/quote/${s.slug}`}>{s.slug === "bathroom-plumbing" ? "Get a free quote" : "Book Plumbees"}</Link></p>
             <p className="note">Covering all of London. Free and without obligation.</p>
             <p className="note">Boiler or heating problem? <a href={site.heatingUrl} rel="noopener">Visit Heatingology</a>.</p>
           </aside>

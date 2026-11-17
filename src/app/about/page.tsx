@@ -61,7 +61,7 @@ export default function AboutPage() {
             {site.reviewsUrl && <p><a href={site.reviewsUrl} rel="noopener">Leave us a Google review</a></p>}
             <h3 style={{ marginTop: 24 }}>Work with us</h3>
             <p>Send us the details of your plumbing problem and we will reply with a clear quote.</p>
-            <p><a className="btn btn-primary" href="/book">Book a plumber</a></p>
+            <p><a className="btn btn-primary" href="/book">Book Plumbees</a></p>
           </aside>
         </div>
       </section>

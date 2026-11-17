@@ -38,9 +38,9 @@ export default async function AreaPage({ params }: Props) {
             <p>Postcodes include {a.postcodes}. If yours is not listed, send it with your request and we will confirm.</p>
           </div>
           <aside className="panel">
-            <h3>Book a plumber in {a.name}</h3>
+            <h3>Book Plumbees in {a.name}</h3>
             <p>Tell us the problem and your postcode. We will come back with a clear written price.</p>
-            <p><Link className="btn btn-primary" href="/book">Book a plumber</Link></p>
+            <p><Link className="btn btn-primary" href="/book">Book Plumbees</Link></p>
           </aside>
         </div>
       </section>

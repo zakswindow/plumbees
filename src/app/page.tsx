@@ -46,7 +46,7 @@ export default function Home() {
             Leaks, blockages, bathrooms and emergencies, looked after by people who treat your home with care. Tell us what is wrong and when suits you, and we will confirm your time and price.
           </p>
           <div className="hero-actions">
-            <Link className="btn btn-light btn-lg" href="/book">Book a plumber</Link>
+            <Link className="btn btn-light btn-lg" href="/book">Book Plumbees</Link>
             {site.phone && <a className="btn btn-outline-light btn-lg" href={phoneHref}>Call {site.phone}</a>}
           </div>
           <ul className="hero-points">

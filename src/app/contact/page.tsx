@@ -24,7 +24,7 @@ export default function ContactPage() {
           <div className="card">
             <h2 style={{ fontSize: "1.3rem" }}>Book online</h2>
             <p>Describe the problem, add your postcode and tell us how urgent it is.</p>
-            <Link className="btn btn-primary" href="/book">Book a plumber</Link>
+            <Link className="btn btn-primary" href="/book">Book Plumbees</Link>
           </div>
           {(site.phone || site.email) && (
             <div className="card">

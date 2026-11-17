@@ -36,7 +36,7 @@ export function Header({ nav, phone, phoneHref }: { nav: readonly NavItem[]; pho
           </ul>
           <div className="nav-foot">
             {phone && <a className="btn btn-outline" href={phoneHref} onClick={close}>Call {phone}</a>}
-            <Link className="btn btn-primary" href="/book" onClick={close}>Book a plumber</Link>
+            <Link className="btn btn-primary" href="/book" onClick={close}>Book Plumbees</Link>
             <p>Open 9am to 6pm, seven days a week. Emergency calls taken at any time.</p>
           </div>
         </nav>
@@ -44,7 +44,7 @@ export function Header({ nav, phone, phoneHref }: { nav: readonly NavItem[]; pho
           {phone && (
             <a className="header-phone" href={phoneHref}>{phone}</a>
           )}
-          <Link className="btn btn-primary btn-sm" href="/book">Book a plumber</Link>
+          <Link className="btn btn-primary btn-sm" href="/book">Book Plumbees</Link>
           <button
             type="button"
             className="menu-toggle"
